@@ -1,0 +1,33 @@
+/* Estilos para la navegación */
+nav {
+  font-size: 1rem;
+  display: flex; /* Alinea los elementos horizontalmente */
+  gap: 1.5rem; /* Espaciado entre los elementos de navegación */
+  align-items: center; /* Alinea verticalmente los elementos */
+  padding: 0.5rem 1rem; /* Espaciado interno del contenedor de navegación */
+}
+
+/* Estilos para los elementos de lista */
+li {
+  list-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #ffffff; /* Color del texto por defecto */
+  padding: 0.5rem 1rem; /* Espaciado interno para mejorar el área clicable */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo para el elemento de lista en estado hover */
+li:hover {
+  background-color: #0050fc; /* Color de fondo al pasar el cursor */
+  color: #ffffff; /* Color del texto en hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para efecto de elevación */
+  transform: translateY(-2px); /* Efecto de elevación sutil */
+}
+
+/* Estilo para el elemento de lista en estado activo */
+li:active {
+  background-color: #003c71; /* Color de fondo cuando se hace clic */
+  transform: translateY(0); /* Restablece la posición al hacer clic */
+}

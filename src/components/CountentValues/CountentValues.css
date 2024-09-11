@@ -1,0 +1,130 @@
+/* === Fondo Animado Mejorado === */
+body {
+  background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background-size: 300% 300%;
+  animation: gradientBackground 12s ease infinite;
+}
+
+/* Animación de fondo */
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Estilo de la tarjeta === */
+.card {
+  display: block;
+  position: relative;
+  justify-content: center;
+  flex: 1 1 320px;
+  max-width: 320px;
+  height: 540px;
+  background-color: #e8f4f7;
+  border-radius: 15px;
+  padding: 2.5em 1.5em;
+  margin: 15px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #d7eff6, #a9d9e1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Efecto de escala y sombreado al pasar el ratón */
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Efecto antes de hover */
+.card:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  right: -20px;
+  background: linear-gradient(135deg, #3d5a7e, #415b7a);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.4s ease-out;
+}
+
+/* Expande la animación al hacer hover en la tarjeta */
+.card:hover:before {
+  transform: scale(30);
+}
+
+/* === Títulos de la tarjeta === */
+.card-title {
+  color: #2a2a2a;
+  font-size: 1.75em;
+  line-height: normal;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+  transition: color 0.4s ease;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7), 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Efecto de neón en los títulos al pasar el ratón */
+.card:hover .card-title {
+  transition: all 0.4s ease-out;
+  color: #f0f0f0;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+/* === Descripción de la tarjeta === */
+.small-desc {
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1.6em;
+  color: #5a5a5a;
+  transition: color 0.4s ease;
+}
+
+/* Cambio de color en la descripción al pasar el ratón */
+.card:hover .small-desc {
+  transition: all 0.4s ease-out;
+  color: rgba(240, 240, 240, 0.9);
+}
+
+/* === Valores de la descripción === */
+.description-values {
+  padding: 1rem;
+  color: #ffffff;
+}
+
+/* === Estilo de la esquina de la tarjeta === */
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2.2em;
+  height: 2.2em;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #6a9fcf, #415b7a);
+  border-radius: 0 6px 0 36px;
+  animation: cornerPulse 2.5s infinite ease-in-out;
+}
+
+/* Animación en la esquina */
+@keyframes cornerPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.go-arrow {
+  margin-top: -5px;
+  margin-right: -5px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,11 @@
+.img-hello{
+    margin: 0;
+    padding: 0;
+    height: 87vh;
+    width: 99vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: fill;
+
+}
